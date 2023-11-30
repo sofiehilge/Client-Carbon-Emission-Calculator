@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
 }
 
-.background{
+.background {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,8 +17,25 @@ body{
   overflow: hidden;
 }
 
-video{
+video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+
+.radio-label {
+  background-color:white;
+  color: black;
+  border-radius: 9999px;
+  padding: 1.15rem 1.25rem;
+  font-family: "Inter", sans-serif;
+  transition-duration: 0.4s;
+}
+
+.radio-label:hover {
+  background-color: rgb(143 146 163);
+}
+
+.radio-input {
+  visibility: hidden;
 }

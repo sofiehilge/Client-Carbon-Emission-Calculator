@@ -62,22 +62,22 @@ const Main = () => {
         {
           value: 10,
           label:
-          "you >7 new pieces of furniture, electronics, or other household gadgets per year",
+            "you >7 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 8,
           label:
-          "you buy 5-7 new pieces of furniture, electronics, or other household gadgets per year",
+            "you buy 5-7 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 6,
           label:
-          "you buy 3-5 new pieces of furniture, electronics, or other household gadgets per year",
+            "you buy 3-5 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 4,
           label:
-          "you buy <3 new pieces of furniture, electronics, or other household gadgets per year",
+            "you buy <3 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 2,
@@ -122,15 +122,15 @@ const Main = () => {
         {
           value: 12,
           label:
-          "you only travel short distances in 1 year, such as within your state",
+            "you only travel short distances in 1 year, such as within your state",
         },
         {
           value: 10,
           label:
-          "you travel further distances, such as to a nearby state or country",
+            "you travel further distances, such as to a nearby state or country",
         },
         { value: 6, label: "you travel far, such as to another continent" },
-        
+
         { value: 0, label: " you didn't travel by flight this year" },
       ],
     },
@@ -158,16 +158,16 @@ const Main = () => {
         {
           value: 0,
           label:
-          "You recycle Glass ,Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
+            "You recycle Glass ,Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
         },
       ],
     },
   ];
-  
+
   const [questionIndex, setQuestionIndex] = useState(0);
   const [scores, setScores] = useState(Array(questions.length).fill(0));
   const [showScore, setShowScore] = useState(false);
-  const [selectedValue, setSelectedValue] = useState(null)
+  const [selectedValue, setSelectedValue] = useState(null);
 
   const handleChange = (selected) => {
     setSelectedValue(selected.value);
@@ -185,11 +185,11 @@ const Main = () => {
     if (selectedValue !== undefined) {
       if (questionIndex < questions.length - 1) {
         setQuestionIndex((prevIndex) => prevIndex + 1);
-        console.log('Current question index:', questionIndex);
-        console.log('Selected value:', scores[questionIndex]);
+        console.log("Current question index:", questionIndex);
+        console.log("Selected value:", scores[questionIndex]);
         //reset the select component by updating its key when moving to the next question
         //this will force it to re-render with the default value
-      setSelectedValue(null)//Reset selected value for the new question
+        setSelectedValue(null); //Reset selected value for the new question
       } else {
         //If all questions are answered, calculate and show the total score
         const totalScore = scores.reduce((acc, curr) => acc + curr, 0);
@@ -218,11 +218,10 @@ const Main = () => {
           {questions[questionIndex].title}
         </p>
         <RadioButton
-       
-        options={questions[questionIndex].options}
-        onChange={(selected) => handleChange(selected)}
-        selectedValue={selectedValue}
-        required
+          options={questions[questionIndex].options}
+          onChange={(selected) => handleChange(selected)}
+          selectedValue={selectedValue}
+          required
         />
         <br />
       </div>
@@ -231,9 +230,7 @@ const Main = () => {
         className={`bg-green-500 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg`}
         disabled={!scores[questionIndex]}
         style={
-          !scores[questionIndex]
-            ? { opacity: 0.5, cursor: "not-allowed" }
-            : {}
+          !scores[questionIndex] ? { opacity: 0.5, cursor: "not-allowed" } : {}
         }
       >
         {questionIndex < questions.length - 1 ? "Next" : "Submit"}

@@ -12,8 +12,9 @@ const Question = ({ title, options, onChange }) => {
             name="options"
             value={option.value}
             onChange={() => onChange(option.value)}
+            className="radio-input"
           />
-          <label htmlFor={option.value}>{option.label}</label>
+          <label htmlFor={option.value} className="radio-label">{option.label}</label>
         </div>
       ))}
     </div>
