@@ -1,9 +1,7 @@
 import { useState } from "react";
-import Select from "react-select";
+import RadioButton from "./RadioButton";
 
 const Main = () => {
-  const [questionIndex, setQuestionIndex] = useState(0);
-
   const questions = [
     {
       title: "Members in Your house?",
@@ -64,22 +62,22 @@ const Main = () => {
         {
           value: 10,
           label:
-            "you >7 new pieces of furniture, electronics, or other household gadgets per year",
+          "you >7 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 8,
           label:
-            "you buy 5-7 new pieces of furniture, electronics, or other household gadgets per year",
+          "you buy 5-7 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 6,
           label:
-            "you buy 3-5 new pieces of furniture, electronics, or other household gadgets per year",
+          "you buy 3-5 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 4,
           label:
-            "you buy <3 new pieces of furniture, electronics, or other household gadgets per year",
+          "you buy <3 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 2,
@@ -124,15 +122,15 @@ const Main = () => {
         {
           value: 12,
           label:
-            "you only travel short distances in 1 year, such as within your state",
+          "you only travel short distances in 1 year, such as within your state",
         },
         {
           value: 10,
           label:
-            "you travel further distances, such as to a nearby state or country",
+          "you travel further distances, such as to a nearby state or country",
         },
         { value: 6, label: "you travel far, such as to another continent" },
-
+        
         { value: 0, label: " you didn't travel by flight this year" },
       ],
     },
@@ -160,16 +158,19 @@ const Main = () => {
         {
           value: 0,
           label:
-            "You recycle Glass ,Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
+          "You recycle Glass ,Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
         },
       ],
     },
   ];
-
+  
+  const [questionIndex, setQuestionIndex] = useState(0);
   const [scores, setScores] = useState(Array(questions.length).fill(0));
   const [showScore, setShowScore] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(null)
 
   const handleChange = (selected) => {
+    setSelectedValue(selected.value);
     setScores((prevScores) => {
       const newScores = [...prevScores];
       newScores[questionIndex] = selected.value;
@@ -188,7 +189,7 @@ const Main = () => {
         console.log('Selected value:', scores[questionIndex]);
         //reset the select component by updating its key when moving to the next question
         //this will force it to re-render with the default value
-        setKey((prevKey) => prevKey + 1);
+      setSelectedValue(null)//Reset selected value for the new question
       } else {
         //If all questions are answered, calculate and show the total score
         const totalScore = scores.reduce((acc, curr) => acc + curr, 0);
@@ -211,20 +212,17 @@ const Main = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto flex flex-col items-center my-10">
-      <span className="text-5xl font-semibold my-5">
-        Your Personal Carbon Footprint Calculator
-      </span>
+    <div className="w-4/5 mx-auto flex flex-col items-center my-10 absolute">
       <div className="w-4/5 mx-auto my-4">
         <p className="text-green-500 text-2xl my-2">
           {questions[questionIndex].title}
         </p>
-        <Select
-          key={key}
-          className="text-gray-700"
-          options={questions[questionIndex].options}
-          onChange={handleChange}
-          required
+        <RadioButton
+       
+        options={questions[questionIndex].options}
+        onChange={(selected) => handleChange(selected)}
+        selectedValue={selectedValue}
+        required
         />
         <br />
       </div>

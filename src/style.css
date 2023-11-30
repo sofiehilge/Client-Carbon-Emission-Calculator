@@ -1,22 +1,24 @@
-::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #d1fae5;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #10b981;
-    border-radius: 20px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #047857;
-  }
-  * {
-    scroll-behavior: smooth;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
