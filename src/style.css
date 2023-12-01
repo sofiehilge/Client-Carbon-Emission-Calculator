@@ -32,10 +32,19 @@ video {
   transition-duration: 0.4s;
 }
 
-.radio-label:hover {
-  background-color: rgb(143 146 163);
+.radio-label:hover, .radio-label-selected {
+  background-color: rgb(222, 222, 227);
 }
 
 .radio-input {
   visibility: hidden;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(101, 180, 245, 0.3);
 }

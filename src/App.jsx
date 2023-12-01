@@ -9,19 +9,13 @@ import Background from "./Components/Background";
 
 function App() {
   return (
-    <>
+    <div>
       <Background />
-      <Navbar />
+      <Navbar className="px-[176px]" />
       <div className="flex justify-center pt-28">
-        <Box /> 
-        <Main />
+        <Box/>
       </div>
-
-      {/* <Hero /> */}
-
-      {/*    <About /> */}
-      {/*       <Footer /> */}
-    </>
+    </div>
   );
 }
 

@@ -8,9 +8,9 @@ const Main = () => {
       options: [
         { value: 14, label: "Live Alone" },
         { value: 12, label: "Share house with 1 person" },
-        { value: 10, label: "Share house with 2 presons" },
-        { value: 8, label: "Share house with 3 presons" },
-        { value: 6, label: "Share house with 4 presons" },
+        { value: 10, label: "Share house with 2 persons" },
+        { value: 8, label: "Share house with 3 persons" },
+        { value: 6, label: "Share house with 4 persons" },
         { value: 4, label: "Share house with 5 presons" },
         { value: 2, label: "Share house with more than 5 presons" },
       ],
@@ -27,12 +27,12 @@ const Main = () => {
     {
       title: "Evaluate Your food choices",
       options: [
-        { value: 12, label: "Pizza ,Chips,packed food ,etc" },
+        { value: 12, label: "Pizza, Chips, packed food, etc." },
         { value: 10, label: "Eat domestic meat on a daily basis" },
         { value: 8, label: "Eat domestic meat few times a week" },
         { value: 6, label: "You have a good balanced diet" },
-        { value: 4, label: "Your are Vegetarian" },
-        { value: 2, label: "Your are Vegetarian and eat only widl meat" },
+        { value: 4, label: "Your are vegetarian" },
+        { value: 2, label: "Your are vegetarian and eat only wild meat" },
       ],
     },
     {
@@ -62,7 +62,7 @@ const Main = () => {
         {
           value: 10,
           label:
-            "you >7 new pieces of furniture, electronics, or other household gadgets per year",
+            "you purchase >7 new pieces of furniture, electronics, or other household gadgets per year",
         },
         {
           value: 8,
@@ -212,9 +212,9 @@ const Main = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto flex flex-col items-center my-10 absolute">
-      <div className="w-4/5 mx-auto my-4">
-        <p className="text-green-500 text-2xl my-2">
+    <div className="flex flex-col items-center absolute">
+      <div>
+        <p className="text-gray-700 font-Montserrat uppercase my-2">
           {questions[questionIndex].title}
         </p>
         <RadioButton
@@ -227,7 +227,7 @@ const Main = () => {
       </div>
       <button
         onClick={handleNext}
-        className={`bg-green-500 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg`}
+        className={`bg-gray-700 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg`}
         disabled={!scores[questionIndex]}
         style={
           !scores[questionIndex] ? { opacity: 0.5, cursor: "not-allowed" } : {}

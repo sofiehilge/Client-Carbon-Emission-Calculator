@@ -1,12 +1,12 @@
 import BoxNavbar from "../Components/BoxNavbar";
-import QuizComp from "../Components/QuizComp";
+import Main from "../Components/Main";
 
 const Box = () => {
   return (
     <>
-      <span className="rounded-xl w-[70vw] h-[70vh] absolute bg-[#f4f4f6] ">
+      <span className="rounded-xl px-[176px] h-[628px] absolute bg-[#f4f4f6]">
         <BoxNavbar />
-   {/*      <QuizComp/> */}
+        <Main />
       </span>
     </>
   );
