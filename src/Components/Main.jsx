@@ -6,13 +6,12 @@ const Main = () => {
     {
       title: "Members in Your house?",
       options: [
-        { value: 14, label: "Live Alone" },
-        { value: 12, label: "Share house with 1 person" },
-        { value: 10, label: "Share house with 2 persons" },
-        { value: 8, label: "Share house with 3 persons" },
-        { value: 6, label: "Share house with 4 persons" },
-        { value: 4, label: "Share house with 5 presons" },
-        { value: 2, label: "Share house with more than 5 presons" },
+        { value: 14, label: "Live Alone", emoji: "🧑", emojiLabel: "person"},
+        { value: 12, label: "Share house with 1 person", emoji: "🧑‍🤝‍🧑", emojiLabel: "two people"},
+        { value: 10, label: "Share house with 2 persons", emoji: "👪", emojiLabel: "three people"},
+        { value: 8, label: "Share house with 3 persons", emoji: "👨‍👩‍👧‍👧", emojiLabel: "four people"},
+        { value: 6, label: "Share house with 4 persons", emoji: "🖐️", emojiLabel: "five people"},
+        { value: 4, label: "Share house with 5 presons", emoji: "🏰", emojiLabel: "Castle" }
       ],
     },
     {

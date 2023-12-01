@@ -1,3 +1,5 @@
+import Emoji from "./Emoji";
+
 const RadioButton = ({ options, onChange, selectedValue }) => {
   return (
     <div className="flex flex-wrap">
@@ -14,6 +16,7 @@ const RadioButton = ({ options, onChange, selectedValue }) => {
             className="form-radio h-2 w-5 radio-input"
           />
           <span className="text-sm text-center rounded-full font-Montserrat text-gray-700 cursor-pointer">
+            <Emoji symbol={option.emoji} label={option.emojiLabel}/>
             {option.label}
           </span>
         </label>
