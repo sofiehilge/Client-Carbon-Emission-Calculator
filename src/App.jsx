@@ -11,9 +11,9 @@ function App() {
   return (
     <div>
       <Background />
-      <Navbar className="px-[176px]" />
-      <div className="flex justify-center pt-28">
-        <Box/>
+      <Navbar className="px-44" />
+      <div className="flex justify-center p-24">
+        <Box />
       </div>
     </div>
   );

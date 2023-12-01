@@ -6,12 +6,37 @@ const Main = () => {
     {
       title: "Members in Your house?",
       options: [
-        { value: 14, label: "Live Alone", emoji: "🧑", emojiLabel: "person"},
-        { value: 12, label: "Share house with 1 person", emoji: "🧑‍🤝‍🧑", emojiLabel: "two people"},
-        { value: 10, label: "Share house with 2 persons", emoji: "👪", emojiLabel: "three people"},
-        { value: 8, label: "Share house with 3 persons", emoji: "👨‍👩‍👧‍👧", emojiLabel: "four people"},
-        { value: 6, label: "Share house with 4 persons", emoji: "🖐️", emojiLabel: "five people"},
-        { value: 4, label: "Share house with 5 presons", emoji: "🏰", emojiLabel: "Castle" }
+        { value: 14, label: "Live Alone", emoji: "🧑", emojiLabel: "person" },
+        {
+          value: 12,
+          label: "Share house with 1 person",
+          emoji: "🧑‍🤝‍🧑",
+          emojiLabel: "two people",
+        },
+        {
+          value: 10,
+          label: "Share house with 2 persons",
+          emoji: "👪",
+          emojiLabel: "three people",
+        },
+        {
+          value: 8,
+          label: "Share house with 3 persons",
+          emoji: "👨‍👩‍👧‍👧",
+          emojiLabel: "four people",
+        },
+        {
+          value: 6,
+          label: "Share house with 4 persons",
+          emoji: "🖐️",
+          emojiLabel: "five people",
+        },
+        {
+          value: 4,
+          label: "Share house with 5 presons",
+          emoji: "🏰",
+          emojiLabel: "Castle",
+        },
       ],
     },
     {
@@ -211,9 +236,9 @@ const Main = () => {
   };
 
   return (
-    <div className="flex flex-col items-center absolute">
+    <div className="flex flex-col justify-center">
       <div>
-        <p className="text-gray-700 font-Montserrat uppercase my-2">
+        <p className="flex justify-center my-2 text-gray-700 uppercase font-Montserrat">
           {questions[questionIndex].title}
         </p>
         <RadioButton
@@ -235,17 +260,17 @@ const Main = () => {
         {questionIndex < questions.length - 1 ? "Next" : "Submit"}
       </button>
       {showScore && (
-        <div className="my-10 flex items-center flex-col bg-green-300 w-4/5 mx-auto p-5 rounded shadow-md">
-          <span className="text-green-800 text-4xl my-4 font-bold">
+        <div className="flex flex-col items-center w-4/5 p-5 mx-auto my-10 bg-green-300 rounded shadow-md">
+          <span className="my-4 text-4xl font-bold text-green-800">
             Score: {scores[scores.length - 1]}
           </span>
-          <p className="text-2xl font-semibold my-4 text-center text-gray-700">
+          <p className="my-4 text-2xl font-semibold text-center text-gray-700">
             {scores <= 60
               ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect environtment"
               : "Opps... Yout Carbon Footprint Score is Very High.\nYou Need To find ways to reduce carbon emission."}
           </p>
           <button
-            className="bg-green-500 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg"
+            className="px-4 py-2 mx-auto my-3 text-lg font-semibold text-gray-100 bg-green-500 rounded"
             onClick={handleStart}
           >
             Start Again
