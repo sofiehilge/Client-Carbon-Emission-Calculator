@@ -1,9 +1,9 @@
 const BoxNavbar = () => {
   return (
-    <div className="flex justify-between font-Montserrat text-xl text-[#121316] leading-5 py-8 px-8 gap-4">
-      <p>Back</p>
+    <div className="flex justify-between font-Montserrat">
+      <p className="bg-gray-700 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg">Back</p>
       <p>QuestionCounter</p>
-      <p>Skip</p>
+      <p className="bg-gray-700 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg">Skip</p>
     </div>
   );
 };

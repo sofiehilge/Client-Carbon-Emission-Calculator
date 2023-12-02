@@ -28,7 +28,7 @@ video {
   background-color:white;
   color: black;
   border-radius: 9999px;
-  padding: 1.15rem 1.25rem;
+  padding: 0.5rem 0.75rem;
   font-family: "Inter", sans-serif;
   transition-duration: 0.4s;
 }

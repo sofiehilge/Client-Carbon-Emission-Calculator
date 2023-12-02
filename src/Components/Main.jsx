@@ -4,7 +4,7 @@ import RadioButton from "./RadioButton";
 const Main = () => {
   const questions = [
     {
-      title: "Members in Your house?",
+      title: "Number of Household Members?",
       options: [
         { value: 14, label: "Live Alone", emoji: "🧑", emojiLabel: "person" },
         {
@@ -27,20 +27,14 @@ const Main = () => {
         },
         {
           value: 6,
-          label: "Share house with 4 persons",
-          emoji: "🖐️",
-          emojiLabel: "five people",
-        },
-        {
-          value: 4,
-          label: "Share house with 5 presons",
+          label: "Share house with 4 or more",
           emoji: "🏰",
-          emojiLabel: "Castle",
+          emojiLabel: "castle",
         },
       ],
     },
     {
-      title: "Size of your house?",
+      title: "Size of Your Home?",
       options: [
         { value: 10, label: "Large House" },
         { value: 7, label: "Medium-sized House" },
@@ -49,140 +43,128 @@ const Main = () => {
       ],
     },
     {
-      title: "Evaluate Your food choices",
+      title: "Asses Your Food Choices",
       options: [
         { value: 12, label: "Pizza, Chips, packed food, etc." },
         { value: 10, label: "Eat domestic meat on a daily basis" },
         { value: 8, label: "Eat domestic meat few times a week" },
-        { value: 6, label: "You have a good balanced diet" },
-        { value: 4, label: "Your are vegetarian" },
-        { value: 2, label: "Your are vegetarian and eat only wild meat" },
+        { value: 6, label: "Maintaion a good balanced diet" },
+        { value: 4, label: "Vegetarian" },
       ],
     },
     {
-      title: "Examine Your water consumption",
+      title: "Review Your Water Consumption",
       options: [
         {
           value: 3,
-          label: "You run washing machine or dishwasher 9+ times a week",
+          label: "Run washer/dishwasher 9+ times a week",
         },
         {
           value: 2,
-          label: "You run washing machine or dishwasher 4-9 times a week",
+          label: "Run washer/dishwasher 4-9 times a week",
         },
         {
           value: 1,
-          label: "You run washing machine or dishwasher 1-3 times a week",
+          label: "Run washer/dishwasher 1-3 times a week",
         },
         {
           value: 0,
-          label: "You dont have a dishwasher or washing machine",
+          label: "No dishwasher or washing machine",
         },
       ],
     },
     {
-      title: "Determine how many household purchases you make each year",
+      title: "Count Your Annual Household Purchases",
       options: [
         {
           value: 10,
-          label:
-            "you purchase >7 new pieces of furniture, electronics, or other household gadgets per year",
+          label: "Purchase >7 new items per year",
         },
         {
           value: 8,
-          label:
-            "you buy 5-7 new pieces of furniture, electronics, or other household gadgets per year",
+          label: "Buy 5-7 new items per year",
         },
         {
           value: 6,
-          label:
-            "you buy 3-5 new pieces of furniture, electronics, or other household gadgets per year",
+          label: "Buy 3-5 new items per year",
         },
         {
           value: 4,
-          label:
-            "you buy <3 new pieces of furniture, electronics, or other household gadgets per year",
+          label: "Buy <3 new items per year",
         },
         {
           value: 2,
-          label: " you purchase almost nothing or only secondhand items",
+          label: "Purchase almost nothing, secondhand items",
         },
       ],
     },
     {
-      title: "Consider how much waste you produce",
+      title: "Measure Your Waste Production",
       options: [
-        { value: 50, label: "you fill 4 garbage cans each week" },
-        { value: 40, label: "you fill 3 garbage cans each week" },
-        { value: 30, label: "you fill 2 garbage cans each week" },
-        { value: 20, label: "you fill 1 garbage can each week" },
-        { value: 5, label: "you fill half garbage can each week" },
+        { value: 50, label: "Fill 4 garbage cans each week" },
+        { value: 40, label: "Fill 3 garbage cans each week" },
+        { value: 30, label: "Fill 2 garbage cans each week" },
+        { value: 20, label: "Fill 1 garbage can each week" },
+        { value: 5, label: "Fill half a garbage can each week" },
       ],
     },
     {
-      title: "Tally up your annual transportation scores(Personal Vehicle)",
+      title: "Calculate Your Annual Personal Vehicle Travel",
       options: [
-        { value: 12, label: "you travel more than 15,000 miles per year" },
-        { value: 10, label: "you travel 10,000 to 15,000 miles per year" },
-        { value: 6, label: "you travel 1,000 to 10,000 miles per year" },
-        { value: 4, label: "you travel less than 1,000 miles per year" },
-        { value: 0, label: " you don't have a personal vehicle" },
+        { value: 12, label: "Travel >25,000 km per year" },
+        { value: 10, label: "Travel 15,000 to 25,000 km per year" },
+        { value: 6, label: "Travel 2,000 to 15,000 km per year" },
+        { value: 4, label: "Travel <2,000 km per year" },
+        { value: 0, label: "No personal vehicle" },
       ],
     },
     {
-      title: "Tally up your annual transportation scores(Public Vehicle)",
+      title: "Calculate Your Annual Public Vehicle Travel",
       options: [
-        { value: 12, label: "you travel more than 20,000 miles per year" },
-        { value: 10, label: "you travel 15,000 to 20,000 miles per year" },
-        { value: 6, label: "you travel 10,000 to 15,000 miles per year" },
-        { value: 4, label: "you travel 1,000 to 10,000 miles per year" },
-        { value: 2, label: "you travel less than 1,000 miles per year" },
-        { value: 0, label: " you don't use a public vehicle" },
+        { value: 12, label: "Travel >30,000 km per year" },
+        { value: 10, label: "Travel 20,000 to 30,000 km per year" },
+        { value: 6, label: "Travel 10,000 to 20,000 km per year" },
+        { value: 4, label: "Travel 2,000 to 10,000 km per year" },
+        { value: 2, label: "Travel <2,000 km per year" },
+        { value: 0, label: "Don't use public transport" },
       ],
     },
     {
-      title: "Tally up your annual transportation scores(Flight)",
+      title: "Calculate Your Annual Flight Travel",
       options: [
         {
           value: 12,
-          label:
-            "you only travel short distances in 1 year, such as within your state",
+          label: "Short distances within your country",
         },
         {
           value: 10,
-          label:
-            "you travel further distances, such as to a nearby state or country",
+          label: "Further distances, nearby countries",
         },
-        { value: 6, label: "you travel far, such as to another continent" },
+        { value: 6, label: "Far distances, other continents" },
 
-        { value: 0, label: " you didn't travel by flight this year" },
+        { value: 0, label: "No flight travel this year" },
       ],
     },
     {
-      title: "Identify the amount of waste you recycle",
+      title: "Determine Your Recycling Habits",
       options: [
-        { value: 24, label: "You dont recycle" },
-        { value: 20, label: "You recycle only Food Waste" },
-        {
-          value: 16,
-          label: "You recycle only Steel and Food Waste",
-        },
+        { value: 24, label: "Don't recycle" },
+        { value: 20, label: "Recycle only Food Waste" },
         {
           value: 12,
-          label: "You recycle only Aluminium ,Steel ,Food Waste",
+          label: "Recycle Aluminium, Steel, Food Waste",
         },
         {
           value: 8,
-          label: "You recycle only Paper ,Aluminium ,Steel ,Food Waste",
+          label: "Recycle Paper, Aluminium, Steel, Food Waste",
         },
         {
           value: 4,
-          label: "You recycle Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
+          label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste",
         },
         {
           value: 0,
-          label:
-            "You recycle Glass ,Plastic ,Paper ,Aluminium ,Steel ,Food Waste",
+          label: "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste",
         },
       ],
     },
@@ -238,7 +220,7 @@ const Main = () => {
   return (
     <div className="flex flex-col justify-center">
       <div>
-        <p className="flex justify-center my-2 text-gray-700 uppercase font-Montserrat">
+        <p className="flex justify-center my-2 text-gray-700 font-Montserrat">
           {questions[questionIndex].title}
         </p>
         <RadioButton
