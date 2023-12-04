@@ -1,13 +1,12 @@
 import BoxNavbar from "../Components/BoxNavbar";
-import Emoji from "../Components/Emoji";
-import Main from "../Components/Main";
+import Quiz from "../Components/Quiz";
 
 const Box = () => {
   return (
     <>
       <span className="rounded-xl  w-[70vw] absolute bg-[#f4f4f6]">
         <BoxNavbar />
-        <Main />
+        <Quiz />
       </span>
     </>
   );
