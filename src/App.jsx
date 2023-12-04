@@ -8,15 +8,14 @@ function App() {
     <div>
       <Background />
       <Navbar className="px-44" />
-      <div className="flex justify-center items-center">
-        {/* <h1 className="text-lg text-white absolute">
+      <div className="flex items-center justify-center">
+        {/* <h1 className="absolute text-lg text-white">
           Personal Climate Emission Quiz
         </h1> */}
-      <div className="flex justify-center p-24">
-        <Box />
+        <div className="flex justify-center p-24">
+          <Box />
+        </div>
       </div>
-      </div>
-        
     </div>
   );
 }

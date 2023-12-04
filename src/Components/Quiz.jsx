@@ -1,5 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import RadioButton from "./RadioButton";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 const Quiz = () => {
   const questions = [
@@ -36,135 +39,136 @@ const Quiz = () => {
     {
       title: "Size of Your Home?",
       options: [
-        { value: 10, label: "Large House" },
-        { value: 7, label: "Medium-sized House" },
-        { value: 4, label: "Small House" },
-        { value: 2, label: "Apartment" },
+        { value: 10, label: "Large House 🏠" },
+        { value: 7, label: "Medium-sized House 🏡" },
+        { value: 4, label: "Small House 🏠" },
+        { value: 2, label: "Apartment 🏢" },
       ],
     },
     {
-      title: "Asses Your Food Choices",
+      title: "Assess Your Food Choices 🍽️",
       options: [
-        { value: 12, label: "Pizza, Chips, packed food, etc." },
-        { value: 10, label: "Eat domestic meat on a daily basis" },
-        { value: 8, label: "Eat domestic meat few times a week" },
-        { value: 6, label: "Maintaion a good balanced diet" },
-        { value: 4, label: "Vegetarian" },
+        { value: 12, label: "Pizza, Chips, packed food, etc. 🍕" },
+        { value: 10, label: "Eat domestic meat on a daily basis 🍖" },
+        { value: 8, label: "Eat domestic meat few times a week 🥩" },
+        { value: 6, label: "Maintain a good balanced diet 🥗" },
+        { value: 4, label: "Vegetarian 🌱" },
       ],
     },
     {
-      title: "Review Your Water Consumption",
+      title: "Review Your Water Consumption 💧",
       options: [
         {
           value: 3,
-          label: "Run washer/dishwasher 9+ times a week",
+          label: "Run washer/dishwasher 9+ times a week 🧼",
         },
         {
           value: 2,
-          label: "Run washer/dishwasher 4-9 times a week",
+          label: "Run washer/dishwasher 4-9 times a week 🧼",
         },
         {
           value: 1,
-          label: "Run washer/dishwasher 1-3 times a week",
+          label: "Run washer/dishwasher 1-3 times a week 🧼",
         },
         {
           value: 0,
-          label: "No dishwasher or washing machine",
+          label: "No dishwasher or washing machine ❌",
         },
       ],
     },
     {
-      title: "Count Your Annual Household Purchases",
+      title: "Count Your Annual Household Purchases 🛒",
       options: [
         {
           value: 10,
-          label: "Purchase >7 new items per year",
+          label: "Purchase > 7 new items per year 🛍️",
         },
         {
           value: 8,
-          label: "Buy 5-7 new items per year",
+          label: "Buy 5-7 new items per year 🛍️",
         },
         {
           value: 6,
-          label: "Buy 3-5 new items per year",
+          label: "Buy 3-5 new items per year 🛍️",
         },
         {
           value: 4,
-          label: "Buy <3 new items per year",
+          label: "Buy < 3 new items per year 🛍️",
         },
         {
           value: 2,
-          label: "Purchase almost nothing, secondhand items",
+          label: "Purchase almost nothing, secondhand items ♻️",
         },
       ],
     },
     {
-      title: "Measure Your Waste Production",
+      title: "Measure Your Waste Production ♻️",
       options: [
-        { value: 50, label: "Fill 4 garbage cans each week" },
-        { value: 40, label: "Fill 3 garbage cans each week" },
-        { value: 30, label: "Fill 2 garbage cans each week" },
-        { value: 20, label: "Fill 1 garbage can each week" },
-        { value: 5, label: "Fill half a garbage can each week" },
+        { value: 50, label: "Fill 4 garbage cans each week 🗑️" },
+        { value: 40, label: "Fill 3 garbage cans each week 🗑️" },
+        { value: 30, label: "Fill 2 garbage cans each week 🗑️" },
+        { value: 20, label: "Fill 1 garbage can each week 🗑️" },
+        { value: 5, label: "Fill half a garbage can each week 🗑️" },
       ],
     },
     {
-      title: "Calculate Your Annual Personal Vehicle Travel",
+      title: "Calculate Your Annual Personal Vehicle Travel 🚗",
       options: [
-        { value: 12, label: "Travel >25,000 km per year" },
-        { value: 10, label: "Travel 15,000 to 25,000 km per year" },
-        { value: 6, label: "Travel 2,000 to 15,000 km per year" },
-        { value: 4, label: "Travel <2,000 km per year" },
-        { value: 0, label: "No personal vehicle" },
+        { value: 12, label: "Travel > 25,000 km per year 🌍" },
+        { value: 10, label: "Travel 15,000 to 25,000 km per year 🌍" },
+        { value: 6, label: "Travel 2,000 to 15,000 km per year 🌍" },
+        { value: 4, label: "Travel < 2,000 km per year 🌍" },
+        { value: 0, label: "No personal vehicle ❌" },
       ],
     },
     {
-      title: "Calculate Your Annual Public Vehicle Travel",
+      title: "Calculate Your Annual Public Vehicle Travel 🚍",
       options: [
-        { value: 12, label: "Travel >30,000 km per year" },
-        { value: 10, label: "Travel 20,000 to 30,000 km per year" },
-        { value: 6, label: "Travel 10,000 to 20,000 km per year" },
-        { value: 4, label: "Travel 2,000 to 10,000 km per year" },
-        { value: 2, label: "Travel <2,000 km per year" },
-        { value: 0, label: "Don't use public transport" },
+        { value: 12, label: "Travel > 30,000 km per year 🌍" },
+        { value: 10, label: "Travel 20,000 to 30,000 km per year 🌍" },
+        { value: 6, label: "Travel 10,000 to 20,000 km per year 🌍" },
+        { value: 4, label: "Travel 2,000 to 10,000 km per year 🌍" },
+        { value: 2, label: "Travel < 2,000 km per year 🌍" },
+        { value: 0, label: "Don't use public transport ❌" },
       ],
     },
     {
-      title: "Calculate Your Annual Flight Travel",
+      title: "Calculate Your Annual Flight Travel 🛩️",
       options: [
         {
           value: 12,
-          label: "Short distances within your country",
+          label: "Short distances within your country ✈️",
         },
         {
           value: 10,
-          label: "Further distances, nearby countries",
+          label: "Further distances, nearby countries ✈️",
         },
-        { value: 6, label: "Far distances, other continents" },
+        { value: 6, label: "Far distances, other continents ✈️" },
 
-        { value: 0, label: "No flight travel this year" },
+        { value: 0, label: "No flight travel this year ❌" },
       ],
     },
     {
-      title: "Determine Your Recycling Habits",
+      title: "Determine Your Recycling Habits ♻️",
       options: [
-        { value: 24, label: "Don't recycle" },
-        { value: 20, label: "Recycle only Food Waste" },
+        { value: 24, label: "Don't recycle ❌" },
+        { value: 20, label: "Recycle only Food Waste ♻️" },
         {
           value: 12,
-          label: "Recycle Aluminium, Steel, Food Waste",
+          label: "Recycle Aluminium, Steel, Food Waste ♻️",
         },
         {
           value: 8,
-          label: "Recycle Paper, Aluminium, Steel, Food Waste",
+          label: "Recycle Paper, Aluminium, Steel, Food Waste ♻️",
         },
         {
           value: 4,
-          label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste",
+          label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
         },
         {
           value: 0,
-          label: "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste",
+          label:
+            "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
         },
       ],
     },
@@ -174,6 +178,7 @@ const Quiz = () => {
   const [scores, setScores] = useState(Array(questions.length).fill(0));
   const [showScore, setShowScore] = useState(false);
   const [selectedValue, setSelectedValue] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleChange = (selected) => {
     setSelectedValue(selected.value);
@@ -187,78 +192,86 @@ const Quiz = () => {
   const handleNext = () => {
     const selectedValue = scores[questionIndex];
     console.log("Selected Value:", selectedValue);
-    //check if an option has been selected for the current question
     if (selectedValue !== undefined) {
       if (questionIndex < questions.length - 1) {
         setQuestionIndex((prevIndex) => prevIndex + 1);
         console.log("Current question index:", questionIndex);
         console.log("Selected value:", scores[questionIndex]);
-        //reset the select component by updating its key when moving to the next question
-        //this will force it to re-render with the default value
-        setSelectedValue(null); //Reset selected value for the new question
+        setSelectedValue(null);
       } else {
-        //If all questions are answered, calculate and show the total score
         const totalScore = scores.reduce((acc, curr) => acc + curr, 0);
         setScores((prevScores) => [...prevScores, totalScore]);
         setShowScore(true);
+        setModalIsOpen(true);
       }
     } else {
-      //Display an alert or handle the case where no option is selected
-      alert("Please select and option before proceeding to the next question.");
+      alert("Please select an option before proceeding to the next question.");
     }
   };
-
-  //add a state to control the key prop of the Select compoenet
-  const [key, setKey] = useState(0);
 
   const handleStart = () => {
     setQuestionIndex(0);
     setScores(Array(questions.length).fill(0));
     setShowScore(false);
+    setModalIsOpen(false);
   };
 
+  const modalClassName = `absolute p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-4 rounded-xl bg-slate-100 Modal top-1/2 left-1/2 ${
+    scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-700"
+  }`;
+
   return (
-    <div className="flex flex-col justify-center">
-      <div>
-        <p className="flex justify-center my-2 text-gray-700 font-Montserrat">
-          {questions[questionIndex].title}
-        </p>
-        <RadioButton
-          options={questions[questionIndex].options}
-          onChange={(selected) => handleChange(selected)}
-          selectedValue={selectedValue}
-          required
-        />
-        <br />
+    <div className="relative flex flex-col items-center justify-center">
+      <div className="my-2 text-gray-700 font-Montserrat">
+        {questions[questionIndex].title}
       </div>
+      <RadioButton
+        options={questions[questionIndex].options}
+        onChange={(selected) => handleChange(selected)}
+        selectedValue={selectedValue}
+        required
+      />
+      <br />
       <button
         onClick={handleNext}
-        className={`bg-gray-700 my-3 mx-auto text-gray-100 font-semibold px-4 py-2 rounded text-lg`}
+        className={`bg-gray-700 my-3 text-gray-100 font-semibold px-4 py-2 rounded text-lg ${
+          !scores[questionIndex] && "opacity-50 cursor-not-allowed"
+        }`}
         disabled={!scores[questionIndex]}
-        style={
-          !scores[questionIndex] ? { opacity: 0.5, cursor: "not-allowed" } : {}
-        }
       >
         {questionIndex < questions.length - 1 ? "Next" : "Submit"}
       </button>
-      {showScore && (
-        <div className="flex flex-col items-center w-4/5 p-5 mx-auto my-10 bg-green-300 rounded shadow-md">
-          <span className="my-4 text-4xl font-bold text-green-800">
-            Score: {scores[scores.length - 1]}
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Example Modal"
+        className={modalClassName}
+        overlayClassName="Overlay"
+      >
+        <div className="flex flex-col items-center">
+          <span className="my-4 text-4xl">
+            Your score: {scores[scores.length - 1]}
           </span>
-          <p className="my-4 text-2xl font-semibold text-center text-gray-700">
-            {scores <= 60
-              ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect environtment"
-              : "Opps... Yout Carbon Footprint Score is Very High.\nYou Need To find ways to reduce carbon emission."}
+          <p className="mb-10 text-xl text-center">
+            {scores[scores.length - 1] <= 60
+              ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect the environment."
+              : "Opps... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions. Take action here!"}
           </p>
           <button
-            className="px-4 py-2 mx-auto my-3 text-lg font-semibold text-gray-100 bg-green-500 rounded"
+            className="px-3 text-xs rounded-xl hover:bg-slate-200"
             onClick={handleStart}
           >
-            Start Again
+            Restart
           </button>
+          <a
+            href="https://withyodo.com/get-access/"
+            className="inline-block w-1/3 p-2 px-10 m-4 text-sm text-center text-white bg-black rounded-full"
+          >
+            Get early access ›
+          </a>
         </div>
-      )}
+      </Modal>
     </div>
   );
 };
