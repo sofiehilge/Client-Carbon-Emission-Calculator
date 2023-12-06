@@ -258,18 +258,18 @@ const Quiz = () => {
               ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect the environment."
               : "Opps... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions. Take action here!"}
           </p>
-          <button
-            className="px-3 text-xs rounded-xl hover:bg-slate-200"
-            onClick={handleStart}
-          >
-            Restart
-          </button>
           <a
             href="https://withyodo.com/get-access/"
             className="inline-block w-1/3 p-2 px-10 m-4 text-sm text-center text-white bg-black rounded-full"
           >
             Get early access ›
           </a>
+          <button
+            className="px-3 text-xs rounded-xl hover:bg-slate-200"
+            onClick={handleStart}
+          >
+            Restart
+          </button>
         </div>
       </Modal>
     </div>
