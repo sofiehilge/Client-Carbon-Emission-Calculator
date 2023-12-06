@@ -9,11 +9,13 @@ const Navbar = () => {
   };
 
   return (
+
     <header className="absolute top-0 flex justify-between w-full px-20 py-5">
       <a href="https://withyodo.com/"><img src={logo} /></a>
       <a  href="https://withyodo.com/get-access/"
        className="inline-block p-2 px-12 text-sm text-center text-white rounded-full font-Montserrat bg-inherit" style={styles}
       >Take action </a>
+
     </header>
   );
 };
