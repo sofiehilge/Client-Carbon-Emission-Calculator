@@ -222,13 +222,13 @@ const Quiz = () => {
     setModalIsOpen(false);
   };
 
-  const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-4 rounded-xl bg-slate-100 Modal top-1/2 left-1/2 ${
+  const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-2 rounded-xl bg-[#f4f4f6] Modal top-1/2 left-1/2 ${
     scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-700"
   } w-4/5 md:w-auto`;
 
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="my-2 text-gray-700 font-Montserrat">
+      <div className="my-4 text-gray-700 font-Montserrat">
         {questions[questionIndex].title}
       </div>
       <RadioButton
@@ -240,7 +240,7 @@ const Quiz = () => {
       <br />
       <button
         onClick={handleNext}
-        className={`bg-gray-700 my-3 text-gray-100 font-semibold px-4 py-2 rounded text-lg ${
+        className={`bg-gray-700 m-4 text-gray-100 font-semibold px-4 py-2 rounded text-lg ${
           !scores[questionIndex] && "opacity-50 cursor-not-allowed"
         }`}
         disabled={!scores[questionIndex]}
