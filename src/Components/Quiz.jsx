@@ -223,7 +223,7 @@ const Quiz = () => {
   };
 
   const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-2 rounded-xl bg-[#f4f4f6] Modal top-1/2 left-1/2 ${
-    scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-700"
+    scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-500"
   } w-4/5 md:w-auto`;
 
   return (
