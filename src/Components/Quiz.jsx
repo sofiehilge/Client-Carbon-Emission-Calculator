@@ -222,9 +222,9 @@ const Quiz = () => {
     setModalIsOpen(false);
   };
 
-  const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-2 rounded-xl bg-[#f4f4f6] Modal top-1/2 left-1/2 ${
+  const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-2 rounded-xl bg-white Modal top-1/2 left-1/2 ${
     scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-500"
-  } w-4/5 md:w-auto`;
+  } w-[85%] md:w-auto`;
 
   return (
     <div className="relative flex flex-col items-center justify-center">
@@ -256,17 +256,17 @@ const Quiz = () => {
         overlayClassName="Overlay"
       >
         <div className="flex flex-col items-center">
-          <span className="my-4 text-4xl">
+          <span className="m-4 text-4xl">
             Your score: {scores[scores.length - 1]}
           </span>
-          <p className="mb-6 text-xl text-center">
+          <p className="mb-4 text-lg text-center">
             {scores[scores.length - 1] <= 60
               ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect the environment."
               : "Opps... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions. Take action here!"}
           </p>
           <a
             href="https://withyodo.com/get-access/"
-            className="inline-block w-full p-2 m-4 text-sm text-center text-white bg-black rounded-full md:w-1/3 md:p-2 md:text-base hover:bg-gray-800"
+            className="inline-block w-2/3 p-2 m-4 text-sm text-center text-white bg-black rounded-full md:w-1/3 md:p-2 md:text-base hover:bg-gray-800"
           >
             Take action ›
           </a>
