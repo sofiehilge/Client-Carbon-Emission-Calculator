@@ -3,14 +3,18 @@ import Button from "./button";
 
 const Navbar = () => {
   return (
-    <header className="absolute top-0 flex justify-between w-full px-20 py-5">
-      <img src={logo} />
-      <Button
-        title="Get early access"
-        onClick={() => console.log("button clicked")}
-        border="border-2 border-white border-opacity-20"
-        backgroundColor="bg-gradient"
-      />
+    <header className="absolute top-0 flex items-center justify-around w-full p-8">
+      <a href="https://withyodo.com/">
+        <img src={logo} />
+      </a>
+      <a href="https://withyodo.com/get-access/">
+        <Button
+          title="Take Action"
+          onClick={() => console.log("button clicked")}
+          border="border-2 border-white border-opacity-20"
+          backgroundColor="bg-gradient"
+        />
+      </a>
     </header>
   );
 };

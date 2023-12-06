@@ -12,7 +12,7 @@ function App() {
         {/* <h1 className="absolute text-lg text-white">
           Personal Climate Emission Quiz
         </h1> */}
-        <div className="flex justify-center p-24">
+        <div className="flex justify-center p-28">
           <Box />
         </div>
       </div>

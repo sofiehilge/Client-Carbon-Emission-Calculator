@@ -222,9 +222,9 @@ const Quiz = () => {
     setModalIsOpen(false);
   };
 
-  const modalClassName = `absolute p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-4 rounded-xl bg-slate-100 Modal top-1/2 left-1/2 ${
+  const modalClassName = `absolute p-2 md:p-6 text-black transform -translate-x-1/2 -translate-y-1/2 border-4 rounded-xl bg-slate-100 Modal top-1/2 left-1/2 ${
     scores[scores.length - 1] <= 60 ? "border-green-500" : "border-red-700"
-  }`;
+  } w-4/5 md:w-auto`;
 
   return (
     <div className="relative flex flex-col items-center justify-center">
@@ -259,19 +259,20 @@ const Quiz = () => {
           <span className="my-4 text-4xl">
             Your score: {scores[scores.length - 1]}
           </span>
-          <p className="mb-10 text-xl text-center">
+          <p className="mb-6 text-xl text-center">
             {scores[scores.length - 1] <= 60
               ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect the environment."
               : "Opps... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions. Take action here!"}
           </p>
           <a
             href="https://withyodo.com/get-access/"
-            className="inline-block w-1/3 p-2 px-10 m-4 text-sm text-center text-white bg-black rounded-full"
+            className="inline-block w-full p-2 m-4 text-sm text-center text-white bg-black rounded-full md:w-1/3 md:p-2 md:text-base hover:bg-gray-800"
           >
-            Get early access ›
+            Take action ›
           </a>
+
           <button
-            className="px-3 text-xs rounded-xl hover:bg-slate-200"
+            className="px-4 mb-2 text-xs rounded-xl hover:bg-slate-200"
             onClick={handleStart}
           >
             Restart
