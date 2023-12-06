@@ -2,19 +2,20 @@ import logo from "../assets/Yodos-Logo.svg";
 import Button from "./button";
 
 const Navbar = () => {
+  const styles = {
+    borderRadius: '6.1875rem',
+    border: '1px solid rgba(255, 255, 255, 0.20)',
+    backgroundImage: 'linear-gradient(92deg, #2181CD 6.38%, #5EA1E2 93.85%)',
+  };
+
   return (
-    <header className="absolute top-0 flex items-center justify-around w-full p-8">
-      <a href="https://withyodo.com/">
-        <img src={logo} />
-      </a>
-      <a href="https://withyodo.com/get-access/">
-        <Button
-          title="Take Action"
-          onClick={() => console.log("button clicked")}
-          border="border-2 border-white border-opacity-20"
-          backgroundColor="bg-gradient"
-        />
-      </a>
+
+    <header className="absolute top-0 flex justify-between w-full px-20 py-5">
+      <a href="https://withyodo.com/"><img src={logo} /></a>
+      <a  href="https://withyodo.com/get-access/"
+       className="inline-block p-2 px-12 text-sm text-center text-white rounded-full font-Montserrat bg-inherit" style={styles}
+      >Take action </a>
+
     </header>
   );
 };

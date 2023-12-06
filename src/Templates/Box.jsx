@@ -5,7 +5,7 @@ const Box = () => {
   return (
     <>
       <span className="rounded-xl w-4/5 absolute bg-[#f4f4f6]">
-        <BoxNavbar />
+        {/*   <BoxNavbar /> */}
         <Quiz />
       </span>
     </>
