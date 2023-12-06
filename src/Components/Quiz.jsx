@@ -59,19 +59,19 @@ const Quiz = () => {
       title: "Review Your Water Consumption 💧",
       options: [
         {
-          value: 3,
+          value: 4,
           label: "Run washer/dishwasher 9+ times a week 🧼",
         },
         {
-          value: 2,
+          value: 3,
           label: "Run washer/dishwasher 4-9 times a week 🧼",
         },
         {
-          value: 1,
+          value: 2,
           label: "Run washer/dishwasher 1-3 times a week 🧼",
         },
         {
-          value: 0,
+          value: 1,
           label: "No dishwasher or washing machine ❌",
         },
       ],
@@ -118,7 +118,7 @@ const Quiz = () => {
         { value: 10, label: "Travel 15,000 to 25,000 km per year 🌍" },
         { value: 6, label: "Travel 2,000 to 15,000 km per year 🌍" },
         { value: 4, label: "Travel < 2,000 km per year 🌍" },
-        { value: 0, label: "No personal vehicle ❌" },
+        { value: 1, label: "No personal vehicle ❌" },
       ],
     },
     {
@@ -129,7 +129,7 @@ const Quiz = () => {
         { value: 6, label: "Travel 10,000 to 20,000 km per year 🌍" },
         { value: 4, label: "Travel 2,000 to 10,000 km per year 🌍" },
         { value: 2, label: "Travel < 2,000 km per year 🌍" },
-        { value: 0, label: "Don't use public transport ❌" },
+        { value: 1, label: "Don't use public transport ❌" },
       ],
     },
     {
@@ -145,7 +145,7 @@ const Quiz = () => {
         },
         { value: 6, label: "Far distances, other continents ✈️" },
 
-        { value: 0, label: "No flight travel this year ❌" },
+        { value: 1, label: "No flight travel this year ❌" },
       ],
     },
     {
@@ -166,7 +166,7 @@ const Quiz = () => {
           label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
         },
         {
-          value: 0,
+          value: 1,
           label:
             "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
         },
@@ -181,6 +181,7 @@ const Quiz = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleChange = (selected) => {
+    console.log("Handling change. selected:", selected.value);
     setSelectedValue(selected.value);
     setScores((prevScores) => {
       const newScores = [...prevScores];
@@ -191,15 +192,20 @@ const Quiz = () => {
 
   const handleNext = () => {
     const selectedValue = scores[questionIndex];
-    console.log("Selected Value:", selectedValue);
+    console.log("Handeling next. Selected Value:", selectedValue);
     if (selectedValue !== undefined) {
       if (questionIndex < questions.length - 1) {
-        setQuestionIndex((prevIndex) => prevIndex + 1);
-        console.log("Current question index:", questionIndex);
-        console.log("Selected value:", scores[questionIndex]);
+        setQuestionIndex((prevIndex) => {
+          console.log(
+            "Moving to the next question. Current index:",
+            questionIndex
+          );
+          return prevIndex + 1;
+        });
         setSelectedValue(null);
       } else {
         const totalScore = scores.reduce((acc, curr) => acc + curr, 0);
+        console.log("submittin. total Score:".totalScore);
         setScores((prevScores) => [...prevScores, totalScore]);
         setShowScore(true);
         setModalIsOpen(true);
