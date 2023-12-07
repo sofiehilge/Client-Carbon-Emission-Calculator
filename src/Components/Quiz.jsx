@@ -39,136 +39,136 @@ const Quiz = () => {
     {
       title: "Size of Your Home?",
       options: [
-        { value: 10, label: "Large House 🏠" },
-        { value: 7, label: "Medium-sized House 🏡" },
-        { value: 4, label: "Small House 🏠" },
-        { value: 2, label: "Apartment 🏢" },
+        { value: 10, label: "Large House", emoji: "🏰", emojiLabel: "castle" },
+        { value: 7, label: "Medium-sized House", emoji: "🏡", emojiLabel: "House with a garden" },
+        { value: 4, label: "Small House", emoji: "🏠", emojiLabel: "House" },
+        { value: 2, label: "Apartment", emoji:"🏢", emojiLabel: "apartment" },
       ],
     },
     {
-      title: "Assess Your Food Choices 🍽️",
+      title: "Assess Your Food Choices",
       options: [
-        { value: 12, label: "Pizza, Chips, packed food, etc. 🍕" },
-        { value: 10, label: "Eat domestic meat on a daily basis 🍖" },
-        { value: 8, label: "Eat domestic meat few times a week 🥩" },
-        { value: 6, label: "Maintain a good balanced diet 🥗" },
-        { value: 4, label: "Vegetarian 🌱" },
+        { value: 12, label: "Pizza, Chips, packed food, etc.", emoji:"🍕", emojiLabel: "pizza slice"},
+        { value: 10, label: "Eat meat on a daily basis", emoji: "🥩", emojiLabel: "meat" },
+        { value: 8, label: "Eat meat few times a week", emoji: "🍗", emojiLabel: "chicken leg" },
+        { value: 6, label: "Maintain a good balanced diet", emoji: "🍲", emojiLabel: "Pot of Food" },
+        { value: 4, label: "Vegetarian", emoji:"🥗", emojiLabel:"green salad" },
       ],
     },
     {
-      title: "Review Your Water Consumption 💧",
+      title: "Review Your Water Consumption",
       options: [
         {
           value: 4,
-          label: "Run washer/dishwasher 9+ times a week 🧼",
+          label: "Run washer/dishwasher 9+ times a week", emoji: "🌊", emojiLabel: "Wave",
         },
         {
           value: 3,
-          label: "Run washer/dishwasher 4-9 times a week 🧼",
+          label: "Run washer/dishwasher 4-9 times a week", emoji: "💦", emojiLabel: "Droplets",
         },
         {
           value: 2,
-          label: "Run washer/dishwasher 1-3 times a week 🧼",
+          label: "Run washer/dishwasher 1-3 times a week", emoji: "💧", emojiLabel: "Drop",
         },
         {
           value: 1,
-          label: "No dishwasher or washing machine ❌",
+          label: "No dishwasher or washing machine", emoji: "❌", emojiLabel: "cross"
         },
       ],
     },
     {
-      title: "Count Your Annual Household Purchases 🛒",
+      title: "Count Your Annual Household Purchases",
       options: [
         {
           value: 10,
-          label: "Purchase > 7 new items per year 🛍️",
+          label: "Purchase > 7 new items per year", emoji: "🏬", emojiLabel: "Department store",
         },
         {
           value: 8,
-          label: "Buy 5-7 new items per year 🛍️",
+          label: "Buy 5-7 new items per year", emoji: "🛋️", emojiLabel: "Couch and Lamp",
         },
         {
           value: 6,
-          label: "Buy 3-5 new items per year 🛍️",
+          label: "Buy 3-5 new items per year", emoji: "🛒", emojiLabel: "Shopping cart",
         },
         {
           value: 4,
-          label: "Buy < 3 new items per year 🛍️",
+          label: "Buy < 3 new items per year", emoji: "🛍️", emojiLabel: "Shoppingbags",
         },
         {
           value: 2,
-          label: "Purchase almost nothing, secondhand items ♻️",
+          label: "Purchase almost nothing, secondhand items", emoji: "♻️", emojiLabel: "Recyclinglabel",
         },
       ],
     },
     {
-      title: "Measure Your Waste Production ♻️",
+      title: "Measure Your Waste Production",
       options: [
-        { value: 50, label: "Fill 4 garbage cans each week 🗑️" },
-        { value: 40, label: "Fill 3 garbage cans each week 🗑️" },
-        { value: 30, label: "Fill 2 garbage cans each week 🗑️" },
-        { value: 20, label: "Fill 1 garbage can each week 🗑️" },
-        { value: 5, label: "Fill half a garbage can each week 🗑️" },
+        { value: 50, label: "Fill 4 garbage cans each week", emoji: "🗑️🗑️🗑️🗑️", emojiLabel: "Wastebasket" },
+        { value: 40, label: "Fill 3 garbage cans each week", emoji: "🗑️🗑️🗑️", emojiLabel: "Wastebasket" },
+        { value: 30, label: "Fill 2 garbage cans each week", emoji: "🗑️🗑️", emojiLabel: "Wastebasket" },
+        { value: 20, label: "Fill 1 garbage can each week", emoji: "🗑️", emojiLabel: "Wastebasket" },
+        { value: 5, label: "Fill half a garbage can each week", emoji:"♻️", emojiLabel:"recycling symbol" },
       ],
     },
     {
-      title: "Calculate Your Annual Personal Vehicle Travel 🚗",
+      title: "Calculate Your Annual Personal Vehicle Travel",
       options: [
-        { value: 12, label: "Travel > 25,000 km per year 🌍" },
-        { value: 10, label: "Travel 15,000 to 25,000 km per year 🌍" },
-        { value: 6, label: "Travel 2,000 to 15,000 km per year 🌍" },
-        { value: 4, label: "Travel < 2,000 km per year 🌍" },
-        { value: 1, label: "No personal vehicle ❌" },
+        { value: 12, label: "Travel > 25,000 km per year", emoji: "🏎️", emojiLabel: "racing car" },
+        { value: 10, label: "Travel 15,000 to 25,000 km per year", emoji: "🚗", emojiLabel: "Car" },
+        { value: 6, label: "Travel 2,000 to 15,000 km per year", emoji: "🏍️", emojiLabel: "Motocycle" },
+        { value: 4, label: "Travel < 2,000 km per year", emoji: "🛵", emojiLabel: "Scooter" },
+        { value: 1, label: "No personal vehicle", emoji: "🚴", emojiLabel: "Person Biking" },
       ],
     },
     {
-      title: "Calculate Your Annual Public Vehicle Travel 🚍",
+      title: "Calculate Your Annual Public Vehicle Travel",
       options: [
-        { value: 12, label: "Travel > 30,000 km per year 🌍" },
-        { value: 10, label: "Travel 20,000 to 30,000 km per year 🌍" },
-        { value: 6, label: "Travel 10,000 to 20,000 km per year 🌍" },
-        { value: 4, label: "Travel 2,000 to 10,000 km per year 🌍" },
-        { value: 2, label: "Travel < 2,000 km per year 🌍" },
-        { value: 1, label: "Don't use public transport ❌" },
+        { value: 12, label: "Travel > 30,000 km per year", emoji: "🚆", emojiLabel: "Light Rail"},
+        { value: 10, label: "Travel 20,000 to 30,000 km per year", emoji: "🚂", emojiLabel: "Locomotive"},
+        { value: 6, label: "Travel 10,000 to 20,000 km per year", emoji: "🚌", emojiLabel: "Bus" },
+        { value: 4, label: "Travel 2,000 to 10,000 km per year", emoji: "🚋", emojiLabel: "Tram" },
+        { value: 2, label: "Travel < 2,000 km per year", emoji: "🚇", emojiLabel: "Metro"},
+        { value: 1, label: "Don't use public transport", emoji: "🐫", emojiLabel: "Camel" },
       ],
     },
     {
-      title: "Calculate Your Annual Flight Travel 🛩️",
+      title: "Calculate Your Annual Flight Travel",
       options: [
         {
           value: 12,
-          label: "Short distances within your country ✈️",
+          label: "Short distances within your country", emoji: "🛩️", emojiLabel: "small plane",
         },
         {
           value: 10,
-          label: "Further distances, nearby countries ✈️",
+          label: "Further distances, nearby countries", emoji: "✈️", emojiLabel: "Plane",
         },
-        { value: 6, label: "Far distances, other continents ✈️" },
+        { value: 6, label: "Far distances, other continents", emoji: "🚀", emojiLabel: "Rocket" },
 
-        { value: 1, label: "No flight travel this year ❌" },
+        { value: 1, label: "No flight travel this year", emoji: "🪂", emojiLabel: "parashoot" },
       ],
     },
     {
-      title: "Determine Your Recycling Habits ♻️",
+      title: "Determine Your Recycling Habits",
       options: [
-        { value: 24, label: "Don't recycle ❌" },
-        { value: 20, label: "Recycle only Food Waste ♻️" },
+        { value: 24, label: "Don't recycle", emoji: "🗑️", emojiLabel: "Wastbasket" },
+        { value: 20, label: "Recycle only Food Waste", emoji: "🥬", emojiLabel: "Leafy green" },
         {
           value: 12,
-          label: "Recycle Aluminium, Steel, Food Waste ♻️",
+          label: "Recycle Aluminium, Steel, Food Waste", emoji: "🥫", emojiLabel: "Canned Food",
         },
         {
           value: 8,
-          label: "Recycle Paper, Aluminium, Steel, Food Waste ♻️",
+          label: "Recycle Paper, Aluminium, Steel, Food Waste", emoji: "🧻", emojiLabel: "Roll of paper",
         },
         {
           value: 4,
-          label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
+          label: "Recycle Plastic, Paper, Aluminium, Steel, Food Waste", emoji: "🍬", emojiLabel: "Candy",
         },
         {
           value: 1,
           label:
-            "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste ♻️",
+            "Recycle Glass, Plastic, Paper, Aluminium, Steel, Food Waste", emoji: "🍹", emojiLabel: "Tropical Drink",
         },
       ],
     },
@@ -261,8 +261,8 @@ const Quiz = () => {
           </span>
           <p className="mb-4 text-lg text-center">
             {scores[scores.length - 1] <= 60
-              ? "Congrats! Your Carbon Footprint Score is Very Less.\nYou are doing a great job to protect the environment."
-              : "Opps... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions. Take action here!"}
+              ? "Congratulations! Your Carbon Footprint Score is Very Low.\nYou are doing a great job in protecting the environment."
+              : "Oops... Your Carbon Footprint Score is Very High.\nYou need to find ways to reduce carbon emissions."}
           </p>
           <a
             href="https://withyodo.com/get-access/"
