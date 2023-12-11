@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RadioButton from "./RadioButton";
 import Modal from "react-modal";
+import ProgressBar from "./ProgressBar";
 
 Modal.setAppElement("#root");
 
@@ -228,6 +229,8 @@ const Quiz = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center">
+      <ProgressBar totalQuestions={questions.length} currentQuestion={questionIndex +1} progress={questionIndex*10
+      } height={20} bgcolor="blue"/>
       <div className="my-4 text-gray-700 font-Montserrat">
         {questions[questionIndex].title}
       </div>
