@@ -20,8 +20,9 @@ const ProgressBar = ({ bgcolor, height, progress }) => {
 
   const progresstext = {
     padding: 10,
+    fontFamily: 'Montserrat, sans-serif',
     color: "white",
-    fontWeight: 900,
+    fontWeight: 400,
    marginTop: "auto",
    marginBottom: "auto"
   };
@@ -29,7 +30,7 @@ const ProgressBar = ({ bgcolor, height, progress }) => {
   return (
     <div style={Parentdiv}>
       <div style={{ ...Childdiv, width: `${progress}%` }}>
-        <span style={progresstext}>{`${progress}%`}</span>
+       { <span style={progresstext}>{`${progress}%`}</span>}
       </div>
     </div>
   );

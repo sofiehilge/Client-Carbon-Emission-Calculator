@@ -257,6 +257,7 @@ const Quiz = () => {
         contentLabel="Example Modal"
         className={modalClassName}
         overlayClassName="Overlay"
+        style={{top: "320px"}}
       >
         <div className="flex flex-col items-center">
           <span className="m-4 text-4xl">
